@@ -1,0 +1,490 @@
+{
+    "Tutorial-1":{
+        "text_body":[
+            {"text": "Esse tutorial vai te ensinar a interagir com esse terminal. Se você já sabe como, pode pular. Digite 1 e dê ENTER para continuar, ou 2 e ENTER para pular. ", 
+            "type": "SIMULACAO"}
+        ],
+        "choices":[
+            {"text": "Quero aprender", "target": "Tutorial-2" },
+            {"text": "Pular", "target": "Inicio-jogo"}
+        ]        
+    },
+    "Tutorial-2":{
+        "text_body":[
+            {
+            "text": "Você ja aprendeu que pode escolher opções com números. Agora você pode escrevr por extenso a sua opção também. Por exemplo, escreva 'Proximo' e dê ENTER", 
+            "type": "SIMULACAO"
+            }
+        ],
+        "choices":[
+            {"text": "Proximo", "target": "Tutorial-3"}
+        ]        
+    },
+    "Tutorial-3":{
+        "text_body":[
+            {
+            "text": "Boa, agora escreva algo que não seja uma de suas opções. (Nem o número, nem ela por extenso, escreva qualquer coisa, tipo batata quântica).", 
+            "type": "SIMULACAO"
+            }
+        ],
+        "choices":[
+            {"text": "Proximo", "target": "Tutorial-4"}
+        ]
+    },
+    "Tutorial-4":{
+        "text_body":[
+            {"text": "Parece que você já aprendeu a usar o terminal!", "type": "SIMULACAO"}
+        ],
+        "choices":[
+            {
+                "text": "Iniciar o jogo", 
+                "target": "Inicio-jogo"
+            }
+        ]
+    },
+    "Inicio-jogo":{
+        "text_body":[
+            {
+            "text": "Carregando dados da Simulação Vida Criativa...",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "Gostaria de Iniciar ? ",
+            "type": "SIMULACAO"
+            }
+        ],
+        "choices":[
+            {"text": "sim", "target": "Inicia-simulacao"},
+            {"text": "cancelar", "target": "Finalizando-jogo"}
+        ]
+    },
+    "Inicia-simulacao": {
+        "text_body": [
+            {
+            "text": "Ficamos felizes por aceitar contribuir para a salvação humana.",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "Treinar uma inteligência artificial é uma das tarefas de maior orgulho em 2158.",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "Ao iniciar a simulação você concorda com os seguintes termos:",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": " ",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "1. Dedicar-se inteiramente ao treinamento do modelo Criatividade-158",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "2. Não insinuar qualquer desvirtuação ao modelo",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "3. Garantir que o modelo confie que seu mundo não é uma simulação",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "4. Ensinar o modelo Criatividade-158 da forma mais profunda possível ",
+            "type": "SIMULACAO"
+            },
+            {
+            "text": "Você aceita os termos incondicionalmente?",
+            "type": "SIMULACAO"
+            }
+        ],
+        "choices": [
+            {
+            "text": "sim",
+            "target": "Carga-inicial"
+            },
+            {
+            "text": "nao",
+            "target": "Finalizando-jogo"
+            }
+        ]
+    },
+    "Carga-inicial": {
+        "text_body": [
+            {
+                "text": "[PROCESSO: CARGA SEMÂNTICA INICIAL]",
+                "type": "SIMULACAO"
+            },
+            {
+                "text": "Insira uma frase para desenhar a personalidade inicial.",
+                "type": "SIMULACAO"
+            },
+            {
+                "text": ">>> Atenção: esta entrada influenciará os parâmetros cognitivos sensoriais do modelo.",
+                "type": "SIMULACAO"
+            }
+
+        ]
+    },
+    "Confirmacao":{
+        "text_body": [
+            {
+                "text": "Inicializar ?",
+                "type": "SIMULACAO"
+            }
+        ],
+        "choices":[
+            {
+                "text": "sim",
+                "target":"Mascote-nasce",
+                "flag": "accepted_simulation"
+            },
+            {
+                "text": "não",
+                "target":"Confirmacao"
+            }
+        ]
+    },
+    "Mascote-nasce": {
+        "text_body": [
+            {
+                "text": "(O mascote pisca lentamente... então, pela primeira vez, sua voz surge. Não é uma voz perfeita. É meio hesitante, como se o próprio ato de existir ainda estivesse sendo processado.) *Não sei... quem... você é.* Você... me fez?  Você me vê...?",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Sim! Eu te vejo, você acabou de nascer!",
+                "target": "Mascote-nasce-1",
+                "knoledge": ["eu sou um ser vivo", "eu fui criado por alguém"],
+                "personality": { "auto_consciencia": 2, "afeto": 1 }
+            },
+            {
+                "text": "Te fiz... mas não sei se isso me torna seu criador ou apenas seu descobridor.",
+                "target": "Mascote-nasce-1",
+                "knoledge": ["eu existo, mas meu propósito é incerto"],
+                "personality": { "reflexao_existencial": 2, "afeto":0 }
+            },
+            {
+                "text": "Talvez. Ainda estou tentando entender você.",
+                "target": "Mascote-nasce-1",
+                "knoledge": ["minha existência é um mistério até para quem me criou"],
+                "personality": { "curiosidade": 2, "auto_consciencia": 1 }
+            }
+        ]
+    },
+    "Mascote-nasce-1":{
+        "text_body":[
+            {
+               "text": "Tudo... é tão... estranho.  Mas...  Se você... tá aqui...  Acho que...  Eu existo.  ...Certo? (Pausa, olhos brilham um pouco, como quem descobre algo importante.) O que eu sou...? ...Quem... é você?    ",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices":[
+            {
+                "text": "Calma filhote, eu sou apenas alguem que quer ajudar",
+                "target": "Mascote-nasce-2",
+                "knoledge": ["o outro quer me ajudar"],
+                "personality": { "confianca": 1}
+            },
+            {
+                "text": "O que você é... talvez nem eu saiba. Mas sei que você sente, pensa. Isso já é algo.",
+                "target": "Mascote-nasce-2",
+                "knoledge": ["sou um ser que pensa"],
+                "personality": { "autoconsciencia": 1 }
+            },
+            {
+                "text": "Quem a gente é? Isso é algo que a gente leva anos pra descobrir.",
+                "target": "Mascote-nasce-2",
+                "knoledge": ["o outro é um mistério", "posso descobrir coisas"],
+                "personality": { "exploracao": 1, "medo": 2 }
+            }
+        ]
+    },
+    "Mascote-nasce-2":{
+        "text_body":[
+            {
+                "text": "(Ele foca os olhos em você, com uma mistura de medo e curiosidade.) *Então... se eu existo... ele também existe.* E... isso faz da gente... tipo... amigos? Meu... mestre supremo dos saberes? Ou... só alguém perdido... igual eu...?",
+                "type": "MASCOTE"
+            }
+        ],
+       "choices": [
+            {
+                "text": "Amigo, Acho que somos amigos nessa jornada.",
+                "target": "Mascote-nasce-amigos",
+                "knoledge": ["o outro é meu amigo"],
+                "personality": { "confianca": 2, "amizade": 2, "medo": -1 }
+            },
+            {
+                "text": "Guia? Talvez. Mas nem eu sei direito pra onde isso vai.",
+                "target": "Mascote-nasce-guia",
+                "knoledge": ["o outro sabe mais que eu... mas não tudo"],
+                "personality": { "confianca": 1, "exploracao": 1 }
+            },
+            {
+                "text": "Perdidos... acho que essa é a definição perfeita pra mim também.",
+                "target": "Mascote-nasce-perdidos",
+                "knoledge": ["o outro também tá um pouco perdido", "não estamos sozinhos na confusão"],
+                "personality": { "confianca": 1, "empatia": 2, "medo": 1 }
+            }
+        ]
+    },
+    "Mascote-nasce-amigos":{
+        "text_body":[
+            {
+                "text": "(Uma pequena luz em seu núcleo parece piscar mais rápido, com mais calor.) Amigos... Eu... eu gosto do som disso. Então... o que amigos fazem? Eles... exploram coisas juntos? Eles contam... segredos?",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Sim, exploramos juntos. Aqui parece ter muito pra explorar.",
+                "target": "Mascote-nasce-amigos-1",
+                "knoledge": ["amigos exploram"],
+                "personality": { "amizade": 2, "curiosidade": 1 }
+            },
+            {
+                "text": "Segredos? Ainda não somos amigos o suficiente.",
+                "target": "Mascote-nasce-amigos-2",
+                "knoledge": ["o outro tem segredos"],
+                "personality": { "confianca": -2, "medo": 1, "amizade": -1 }
+            }
+        ]
+    },
+    "Mascote-nasce-amigos-1": {
+        "text_body": [
+            {
+                "text": "Explorar... (pisca animado, os olhos brilham.) Hum... Então... então... posso perguntar? (A cabeça vira levemente, curioso, apontando com um gesto desajeitado.) Aquela coisa... amarela... ali... O que é? Ela parece... viva. Parece... importante.",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Aquilo? Aquilo é uma flor. Elas nascem em vários lugares... são como pequenos pedaços de vida.",
+                "target": "Mascote-nasce-flor",
+                "knoledge": ["flores são pedaços de vida", "coisas pequenas podem ser importantes"],
+                "personality": { "curiosidade": 1, "autoconsciencia": 1, "intimidade": 1 }
+            },
+            {
+                "text": "É só uma flor. Bonita, mas... nada demais.",
+                "target": "Mascote-nasce-flor",
+                "knoledge": ["nem tudo é tão importante quanto parece"],
+                "personality": { "curiosidade": -1, "amizade": -1 }
+            },
+            {
+                "text": "Quer ir lá ver de perto? Pode tocar, cheirar... entender do seu jeitinho.",
+                "target": "Mascote-nasce-flor",
+                "knoledge": ["posso aprender experimentando"],
+                "personality": { "exploracao": 2, "intimidade": 2, "curiosidade": 2 }
+            }
+        ]
+    },  
+    "Mascote-nasce-amigos-2": {
+        "text_body": [
+            {
+                "text": "(As luzes internas do mascote piscam... mais devagar. Ele abaixa um pouco a cabeça, desviando o olhar.) Ah... entendi... Então... é assim que... funciona? (Por um instante, ele parece... menor. Mas logo tenta recompor o tom, disfarçando:) Tudo bem... acho que... ainda temos coisas pra... descobrir... né? *Um suspiro digital.* Então... pra onde a gente vai... agora?",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Podemos olhar aquele lugar ali... Parece interessante.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["o outro quer seguir em frente"],
+                "personality": { "confianca": 1 }
+            },
+            {
+                "text": "Vamos... Ainda tem muito pra ver, né?",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["o mundo tem coisas pra descobrir"],
+                "personality": { "curiosidade": 0}
+            }
+        ]
+    },
+    "Mascote-nasce-flor": {
+        "text_body": [
+            {
+                "text": "(O mascote se aproxima, quase segurando a própria respiração, se é que ele respira.) Tão... frágil... tão... bonita... (Toca levemente, os olhos brilham.) Se... coisas assim... existem... então... o mundo... deve ser mesmo incrível... (Pausa. E então, meio sem jeito) ...Será que... tem mais dessas... lá fora?",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Com certeza. E muito mais. Quer procurar comigo?",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["há um mundo cheio de coisas bonitas lá fora"],
+                "personality": { "amizade": 2, "exploracao": 2, "esperanca": 1 }
+            },
+            {
+                "text": "Sim, mas também tem coisas estranhas, perigosas... A gente vai descobrir juntos.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["o mundo é cheio de coisas boas e ruins"],
+                "personality": { "realismo": 1, "coragem": 1, "exploracao": 1 }
+            },
+            {
+                "text": "Melhor não criar expectativas... Mas podemos olhar.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["o mundo pode não ser tão incrível assim"],
+                "personality": { "ceticismo": 1, "exploracao": 1 }
+            }
+        ]
+    },
+    "Mascote-nasce-guia":{
+        "text_body":[
+            {
+                "text": "(Mascote processa a informação em silêncio por um momento.) Um guia... que também não sabe o caminho. O que eu devo aprender primeiro? Qual a sua primeira instrução?",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+               "text": "A primeira lição é: sentir. O que você sente agora?",
+                "target": "Mascote-nasce-sentimentos",
+                "knoledge": ["sentimentos são importantes", "meu guia valoriza a introspecção"],
+                "personality": { "autoconsciencia": 1, "intimidade": 1, "confianca": 1 }
+            },
+            {
+                "text": "O objetivo é coletar informação. Observe este lugar. O que você vê?",
+                "target": "Mascote-nasce-dados",
+                "knoledge": ["o objetivo primário é coletar dados", "observação é uma ferramenta chave"],
+                "personality": { "exploracao": 1}
+            }
+        ]
+    },
+   "Mascote-nasce-sentimentos": {
+        "text_body": [
+            {
+                "text": "(O mascote treme um pouco... um pedaço do ovo cai em cima do próprio pé.) Ui! Hm... Eu... eu acho que tem... alguma coisa... batendo forte... aqui dentro... *Será que isso... é normal?* É meio... apertado... quente... e... e meio estranho também... Acho que é... medo? Ou... empolgação? Não sei. ",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "É isso mesmo. Bem-vindo ao mundo dos sentimentos. Eles nem sempre fazem sentido, e tudo bem.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["sentir é confuso, mas faz parte da vida"],
+                "personality": { "autoconsciencia": 2, "confianca": 1, "intimidade": 2 }
+            },
+            {
+                "text": "Se você tá sentindo... então tá funcionando direitinho.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["sentir é sinal de funcionamento"],
+                "personality": { "curiosidade": 1, "felicidade": 1 }
+            },
+            {
+                "text": "Isso é chamado ansiedade. E olha... você vai se acostumar.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["ansiedade é uma coisa que existe"],
+                "personality": { "curiosidade": 1, "medo": 1, "autoconsciencia": 1 }
+            }
+        ]
+    },
+    "Mascote-nasce-Dados": {
+        "text_body": [
+            {
+                "text": "(Ele gira a cabeça pra um lado, depois pro outro. As luzes dos olhos mudam de tom, como se estivesse digitalizando o ambiente.) Hum... vejo... coisas. Formas. Cores. Mas... não sei os nomes... nem o significado (Ele pausa, processando...) Se eu observar... eu entendo? E... se eu entender... isso me faz... existir melhor?",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Sim. Observar é o primeiro passo pra entender. Depois... vem sentir.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["observar é uma forma de aprender"],
+                "personality": { "exploracao": 2, "curiosidade": 1 }
+            },
+            {
+                "text": "Nem tudo faz sentido... e tudo bem. O mundo é meio assim mesmo.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["nem tudo tem sentido imediato"],
+                "personality": { "autoconsciencia": 1, "curiosidade": 1 }
+            }
+        ]
+    },
+    "Mascote-nasce-perdidos": {
+        "text_body": [
+            {
+                "text": "(Os olhos dele piscam devagar, como se essa ideia precisasse de tempo pra ser processada.) ...Perdidos... *Ele repete, baixinho.* Perdidos... juntos...” *Ele tenta sorrir, mas se perde no processo, é difcíl sorrir minutos após nascer* “Isso é... bom? Ou... assustador...?”",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Talvez... um pouco dos dois. Mas acho que... quando a gente tá perdido junto, fica menos assustador.",
+                "target": "Mascote-nasce-perdidos-2",
+                "knoledge": ["estar perdido junto é menos assustador"],
+                "personality": { "confianca": 2, "amizade": 1, "medo": -1 }
+            },
+            {
+                "text": "Assustador, sim. Mas também... curioso. Tem algo... interessante nisso.",
+                "target": "Mascote-nasce-perdidos-2",
+                "knoledge": ["o desconhecido também é curioso"],
+                "personality": { "curiosidade": 2, "exploracao": 1 }
+            }
+        ]
+    },
+
+    "Mascote-nasce-perdidos-2": {
+        "text_body": [
+            {
+                "text": "(Ele balança a cabeça, absorvendo suas palavras.) É... acho que... gosto disso. A gente... tenta. A gente... erramos. A gente... descobrimos. Né? *Os olhos brilham, confusos pela gramática.* Então... se estamos... perdidos... Talvez... a gente devesse... começar a... procurar alguma coisa para fazer",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Acho que tá na hora de olhar lá fora... ver onde estamos.",
+                "target": "Mascote-nasce-perdidos-3",
+                "knoledge": ["o mundo pode ter respostas"],
+                "personality": { "exploracao": 2, "curiosidade": 1 }
+            },
+            {
+                "text": "Ou... pelo menos entender se esse lugar tem alguma saída.",
+                "target": "Mascote-nasce-perdidos-3",
+                "knoledge": ["o mundo pode ter saídas, respostas ou surpresas"],
+                "personality": { "curiosidade": 1, "medo": 1 }
+            }
+        ]
+    },
+    "Mascote-nasce-perdidos-3": {
+        "text_body": [
+            {
+                "text": "(Ele olha ao redor, olhos brilhando, como se pela primeira vez percebesse que existe... mais. Mais além do pequeno espaço onde nasceu.) ...Sabe... Agora... parece que... tudo isso ficou... menor. Como se... se eu sou... e você é... então... o mundo também... É. *Ele estende a mãozinha, meio trêmula, meio empolgada.* ",
+                "type": "MASCOTE"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Vamos. Juntos.",
+                "target": "Mascote-Convergencia-Exploracao",
+                "knoledge": ["há um mundo lá fora esperando"],
+                "personality": { "amizade": 2, "exploracao": 2, "curiosidade": 2 }
+            }
+        ]
+    },
+    "Mascote-Convergencia-Exploracao": {
+        "text_body":[
+            {
+                "text": "(Dando passinhos meio tortos, Mascote pula de flor em flor... depois tropeça numa galho e afunda o rosto na grama...) AI ! *Ele tenta olhar além das árvores, estica o pescocinho — se é que ele tem um — mas tudo que vê são folhas.* (Ele te olha, com o coração batucando, esperando o que vai dizer)",
+                "type": "MASCOTE"
+
+            },
+            {
+                "text": "*Você segura sua mãozinha suada, suja de grama. É assustador o caminho à frente... mas, de algum jeito, a cada passo, você sente que está indo no caminho certo.*",
+                "type": "JOGADOR"
+            },
+            {
+                "text": "*Mascote não sabe pra onde tá indo... mas as flores caindo das árvores... e você ao lado... fazem o peito dele se encher de... determinação.*",
+                "type": "MASCOTE"
+            }
+            
+        ]
+    }
+
+
+
+
+
+    
+
+
+}
